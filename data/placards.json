@@ -1,0 +1,32 @@
+[
+  {
+    "id": "p-hero-01",
+    "title": "Welcome to the News Demo",
+    "subtitle": "These are dummy cards you can render in a hero row",
+    "badge": "Demo",
+    "kind": "promo",
+    "image_url": "https://picsum.photos/seed/placardhero/1600/900",
+    "action_label": "View Latest News",
+    "action_url": "mcp://tool/list_news"
+  },
+  {
+    "id": "p-tip-01",
+    "title": "Pro Tip",
+    "subtitle": "Filter by category with list_news(category='tech')",
+    "badge": "Tip",
+    "kind": "tip",
+    "image_url": "https://picsum.photos/seed/placardtip/800/450",
+    "action_label": "Try It",
+    "action_url": "mcp://tool/list_news?category=tech"
+  },
+  {
+    "id": "p-news-01",
+    "title": "Apps SDK Examples",
+    "subtitle": "Use these patterns to render lists, cards, and details in ChatGPT",
+    "badge": "Info",
+    "kind": "news",
+    "image_url": "https://picsum.photos/seed/placardnews/800/450",
+    "action_label": "Open Repo",
+    "action_url": "https://github.com/openai/openai-apps-sdk-examples"
+  }
+]
