@@ -21,13 +21,11 @@ def _load_news() -> List[NewsItem]:
 
 def register_news_tools(mcp: FastMCP) -> None:
     news_db = _load_news()
-
     # --- MCP Resources (one per article) -------------------------------------
     for item in news_db:
         uri = f"mcp://news/{item.id}"
         mcp.add_resource(
             uri,
-            description=f"News article ({item.category})",
             mime_type="application/json",
             data=item.model_dump_json().encode("utf-8"),
         )
