@@ -1,0 +1,38 @@
+[
+  {
+    "id": "n-001",
+    "title": "OpenAI Apps SDK Fuels New In-Chat Experiences",
+    "category": "tech",
+    "summary": "Developers showcase app components and MCP servers to bring rich UIs inside ChatGPT.",
+    "body": "The Apps SDK allows apps to render interactive components in ChatGPT while tools are provided via MCP servers. Early demos include listings, dashboards, and builder workflows.",
+    "author": "Alex Rivera",
+    "published_at": "2025-10-10T09:00:00Z",
+    "image_url": "https://picsum.photos/seed/appssdk/1200/630",
+    "source_url": "https://openai.com/",
+    "tags": ["apps sdk", "mcp", "chatgpt", "ui"]
+  },
+  {
+    "id": "n-002",
+    "title": "FastMCP Simplifies MCP Server Development",
+    "category": "tech",
+    "summary": "A Pythonic framework reduces boilerplate and speeds up deploying MCP servers.",
+    "body": "FastMCP adds decorators, resource helpers, and deployment conveniences for building production MCP servers quickly.",
+    "author": "Samir Kulkarni",
+    "published_at": "2025-09-30T14:30:00Z",
+    "image_url": "https://picsum.photos/seed/fastmcp/1200/630",
+    "source_url": "https://gofastmcp.com/",
+    "tags": ["fastmcp", "python", "mcp"]
+  },
+  {
+    "id": "n-003",
+    "title": "Local Tech Conference Highlights AI Tooling",
+    "category": "culture",
+    "summary": "Workshops walk developers through MCP and Apps SDK integrations.",
+    "body": "Hands-on sessions demonstrated how to connect MCP tools to app components, including placard cards and news lists.",
+    "author": "Priya Nair",
+    "published_at": "2025-10-01T11:00:00Z",
+    "image_url": "https://picsum.photos/seed/aiworkshop/1200/630",
+    "source_url": null,
+    "tags": ["events", "workshops", "ai"]
+  }
+]
