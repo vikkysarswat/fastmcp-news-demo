@@ -1,0 +1,13 @@
+[project]
+name = "fastmcp-news-demo"
+version = "0.1.0"
+description = "FastMCP demo server exposing news and placards as MCP tools/resources"
+requires-python = ">=3.10"
+dependencies = [
+  "fastmcp>=1.0",
+  "pydantic>=2.8",
+  "uvicorn>=0.30",
+]
+
+[tool.ruff]
+line-length = 100
