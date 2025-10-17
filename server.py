@@ -1,5 +1,4 @@
-"""
-FastMCP News & Placards server.
+"""FastMCP News & Placards server.
 
 Run:
   python server.py
@@ -20,10 +19,7 @@ from tools.placards import register_placard_tools
 
 
 def build_server() -> FastMCP:
-    mcp = FastMCP(
-        "FastMCP News Demo",
-        description="Demo MCP server exposing news and placards for ChatGPT Apps.",
-    )
+    mcp = FastMCP("FastMCP News Demo")
 
     # Health check / baseline utility
     @mcp.tool
