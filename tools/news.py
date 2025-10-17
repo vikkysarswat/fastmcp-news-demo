@@ -1,14 +1,11 @@
 """
 News toolset for FastMCP.
-
 Provides:
 - list_news(category, limit)
 - get_news_by_id(id)
 - search_news(query, limit)
-
 Also registers news items as MCP resources under `mcp://news/`.
 """
-
 from __future__ import annotations
 import json
 from pathlib import Path
@@ -18,11 +15,9 @@ from models.schema import NewsItem
 
 DATA_PATH = Path(__file__).resolve().parents[1] / "data" / "news.json"
 
-
 def _load_news() -> List[NewsItem]:
     items = json.loads(DATA_PATH.read_text(encoding="utf-8"))
     return [NewsItem.model_validate(i) for i in items]
-
 
 def register_news_tools(mcp: FastMCP) -> None:
     news_db = _load_news()
@@ -32,23 +27,19 @@ def register_news_tools(mcp: FastMCP) -> None:
         uri = f"mcp://news/{item.id}"
         mcp.add_resource(
             uri,
-            name=item.title,
             description=f"News article ({item.category})",
             mime_type="application/json",
             data=item.model_dump_json().encode("utf-8"),
         )
 
     # --- Tools ----------------------------------------------------------------
-
     @mcp.tool
     def list_news(category: Optional[str] = None, limit: int = 20) -> List[NewsItem]:
         """
         List news, optionally filtered by category.
-
         Args:
             category: Optional category filter (e.g., 'tech').
             limit: Maximum number of items to return.
-
         Returns:
             A list of NewsItem objects (sorted by published_at desc).
         """
@@ -62,7 +53,6 @@ def register_news_tools(mcp: FastMCP) -> None:
     def get_news_by_id(id: str) -> Optional[NewsItem]:
         """
         Retrieve a single news item by its ID.
-
         Returns:
             The matching NewsItem or None if not found.
         """
@@ -75,11 +65,9 @@ def register_news_tools(mcp: FastMCP) -> None:
     def search_news(query: str, limit: int = 20) -> List[NewsItem]:
         """
         Full-text search across title, summary, body, and tags.
-
         Args:
             query: Search query string.
             limit: Maximum number of results.
-
         Returns:
             Matching NewsItem objects (naive rank by occurrence count).
         """
