@@ -1,0 +1,13 @@
+{
+  "version": "1",
+  "servers": [
+    {
+      "id": "fastmcp-news",
+      "name": "FastMCP News Demo",
+      "transport": {
+        "type": "stdio"
+      },
+      "command": ["python", "server.py"]
+    }
+  ]
+}
